@@ -1,0 +1,19 @@
+projection;
+
+define behavior for zprad_C_Travel_Approver_M alias prad_trav_apprvr
+use etag
+{
+field (readonly) BeginDate, EndDate, TotalPrice, CustomerID;
+  //use create;
+  use update;
+  //use delete;
+  use action acceptTravel;
+ // use action createTravelByTemplate;
+  use action rejectTravel;
+ // use association _BOOKING { create; }
+}
+
+//define behavior for zprad_C_Booking_Approver_M //alias <alias_name>
+//{
+//  use update;
+//}

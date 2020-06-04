@@ -1,0 +1,15 @@
+@EndUserText.label: 'UI for travel processor'
+define service Zprad_ui_travel_processor {
+  expose zprad_C_TRAVEL_PROCESSOR_M as Travel;
+  expose zprad_C_BOOKING_PROCESSOR_M as Booking;
+  expose zprad_C_BOOKSUPPL_PROCESSOR_M as BookingSupplement;
+  expose /DMO/I_Supplement as Supplement;
+  expose /DMO/I_SupplementText as SupplementText;
+  expose /DMO/I_Customer as Passenger;
+  expose /DMO/I_Agency as TravelAgency;
+  expose /DMO/I_Carrier as Airline;
+  expose /DMO/I_Connection as FlightConnection;
+  expose /DMO/I_Flight as Flight;
+  expose I_Currency as Currency;
+  expose I_Country as Country;
+}

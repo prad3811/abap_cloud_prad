@@ -1,0 +1,26 @@
+projection;
+
+define behavior for zprad_C_TRAVEL_PROCESSOR_M alias Prad_travel_prcsr
+use etag
+{
+  use create;
+  use update;
+  use delete;
+  use action acceptTravel;
+  use action createTravelByTemplate;
+  use action rejectTravel;
+  use association _BOOKING { create; }
+}
+
+define behavior for zprad_C_BOOKING_PROCESSOR_M alias prad_book_prcsr
+use etag
+{
+  use update;
+  use association _BOOKSUPPLEMENT { create; }
+}
+
+define behavior for zprad_C_BOOKSUPPL_PROCESSOR_M alias prad_bsuppl_prcsr
+use etag
+{
+  use update;
+}
